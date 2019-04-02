@@ -13,7 +13,6 @@
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
   <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
-  <script src="./index.js"></script>
 
   <a-scene embedded arjs="debugUIEnabled:false" vr-mode-ui="enabled:false">
     <a-assets>
@@ -63,6 +62,17 @@
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
+    
+  <script type="text/javascript">
+    var lists=[
+    '<a-obj-model position="0 0.5 0" src="#plate1" mtl="#plate1-mtl" scale="2.5 2.5 2.5">',
+    '<a-obj-model position="0 0.5 0" src="#plate2" mtl="#plate2-mtl" scale="2.5 2.5 2.5">'
+    ];
+
+    var rNo = Math.floor(Math.random() * lists.length);
+    document.getElementById('marker').innerHTML = lists[rNo];
+  </script>
+    
 </body>
 
 </html>
