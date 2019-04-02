@@ -66,7 +66,15 @@
   <script type="text/javascript">
     var lists=[
     '<a-obj-model position="0 0.5 0" src="#plate1" mtl="#plate1-mtl" scale="2.5 2.5 2.5"></a-obj-model>',
-    '<a-obj-model position="0 0.5 0" src="#plate2" mtl="#plate2-mtl" scale="2.5 2.5 2.5"></a-obj-model>'
+    '<a-obj-model position="0 0.5 0" src="#plate2" mtl="#plate2-mtl" scale="2.5 2.5 2.5">'
+      + '  <a-animation attribute="rotation"'
+      + '           to="0 360 0"'
+      + '           fill="forwards"'
+      + '           repeat="indefinite"'
+      + '           dur="12000"' 
+      + '           easing="linear">'
+      + '  </a-animation>'
+      + '</a-obj-model>'
     ];
 
     var rNo = Math.floor(Math.random() * lists.length);
