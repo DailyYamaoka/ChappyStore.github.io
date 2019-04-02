@@ -13,6 +13,23 @@
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
   <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+  <script type="text/javascript">
+    var rand = Math.floor(Math.random() * 2) + 1;
+    var str = "plate" + rand;
+    document.getElementById('input1').value = str;
+    var h = '<a-obj-model position="0 0.5 0" src="'
+      + str
+      + '" scale="2.5 2.5 2.5">'
+      + '  <a-animation attribute="rotation"'
+      + '           to="0 360 0"'
+      + '           fill="forwards"'
+      + '           repeat="indefinite"'
+      + '           dur="12000"' 
+      + '           easing="linear">'
+      + '  </a-animation>'
+      + '</a-obj-model>';
+    document.getElementById('marker').insertAdjacentHTML('afterbegin',h);
+  </script>  
 
   <a-scene embedded arjs="debugUIEnabled:false" vr-mode-ui="enabled:false">
     <a-assets>
@@ -27,6 +44,7 @@
       <img id="stranger" src="./Images/uncle.png">
     </a-assets>
     <a-marker preset="custom" type="pattern" url="pattern-marker.patt" id="marker">
+      <!--
       <a-obj-model position="0 0.5 0" src="#plate2" mtl="#plate2-mtl" scale="2.5 2.5 2.5">
         <a-animation attribute="rotation"
                  to="0 360 0"
@@ -36,7 +54,6 @@
                  easing="linear">
         </a-animation>
       </a-obj-model>
-      <!--
       <a-obj-model position="0 0.55 0" src="#bread" mtl="#bread-mtl" scale="1.5 1.5 1.5">      
         <a-animation attribute="rotation"
                  to="0 360 0"
