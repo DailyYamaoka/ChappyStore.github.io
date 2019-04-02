@@ -70,7 +70,7 @@
     ];
 
     var rNo = Math.floor(Math.random() * lists.length);
-    document.getElementById('marker').innerHTML = lists[rNo];
+    document.getElementById('marker').insertAdjacentHTML('afterbegin',  lists[rNo]);
   </script>
     
 </body>
