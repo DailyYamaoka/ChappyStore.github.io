@@ -13,24 +13,7 @@
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
   <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
-  <script type="text/javascript">
-    <!--
-    var rand = Math.floor(Math.random() * 2) + 1;
-    var str = "plate" + rand;
-    var h = '<a-obj-model position="0 0.5 0" src="'
-      + str
-      + '" scale="2.5 2.5 2.5">'
-      + '  <a-animation attribute="rotation"'
-      + '           to="0 360 0"'
-      + '           fill="forwards"'
-      + '           repeat="indefinite"'
-      + '           dur="12000"' 
-      + '           easing="linear">'
-      + '  </a-animation>'
-      + '</a-obj-model>';
-    document.getElementById('marker').insertAdjacentHTML('afterbegin',h);
-    -->
-  </script>  
+  <script src="./index.js"></script>
 
   <a-scene embedded arjs="debugUIEnabled:false" vr-mode-ui="enabled:false">
     <a-assets>
